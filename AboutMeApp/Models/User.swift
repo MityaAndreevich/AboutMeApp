@@ -10,18 +10,15 @@ struct User {
     let password = "Password"
     let person: Person
     
-   // static func getInfo() -> User {
-    //}
+   static func getInfo() -> User {
+    User(person: Person())
+    }
 }
 
 struct Person {
     let name = "Dmitry"
     let surname = "Logachev"
-    let someInfo: SomeInfo
-}
-
-struct SomeInfo {
-    let hobby = "Psychology, Boxing, Fitness, cars, Swift)"
-    let eduation = "Master of Economics"
-    let job = "Researcher in Jato, entrepreneurship: selling sousages, making CV."
+    let hobby = "Hobby: Psychology, Boxing, Fitness, cars, Swift)"
+    let eduation = "Education: Master of Economics"
+    let job = "Jobs: Researcher in Jato, entrepreneurship: selling sousages, making CVs."
 }

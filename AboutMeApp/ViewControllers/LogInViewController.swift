@@ -12,9 +12,10 @@ class LogInViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    let user = User.getInfo()
     // MARK: - Private Properties
-    private let realUserName = "Name"
-    private let realUserPassword = "Password"
+    
     //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,27 +25,27 @@ class LogInViewController: UIViewController {
     }
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let tabBarController = segue.destination as! UITabBarController
+        let tabBarController = segue.destination as! UITabBarController
        
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         //for viewController in viewControllers let welcomeVC = viewController as? WelcomeViewController {
             
         //}
     
-        welcomeVC.userName = userNameTextField.text
+       // welcomeVC.userName = userNameTextField.text
     }
     
     // MARK: - IB Actions
     @IBAction func forgotRegisteredData(_ sender: UIButton) {
         sender.tag == 0
-            ? sendingAlertMessage(title: "Forgot user Name?", message: "User name: \(realUserName) 😉")
-            : sendingAlertMessage(title: "Forgot password?", message: "Password: \(realUserPassword) 😉")
+            ? sendingAlertMessage(title: "Forgot user Name?", message: "User name: \(user.login) 😉")
+            : sendingAlertMessage(title: "Forgot password?", message: "Password: \(user.password) 😉")
     }
     
     @IBAction func logInButtonPressed() {
         guard
-            userNameTextField.text == realUserName,
-            passwordTextField.text == realUserPassword
+            userNameTextField.text == user.login,
+            passwordTextField.text == user.password
         else {
             sendingAlertMessage(
                 title: "Alert!",

@@ -11,7 +11,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeUser: UILabel!
     
-    var userName: String!
+    let user = User.getInfo()
     
     private let primaryColor = UIColor(
         red: 210/255,
@@ -33,7 +33,7 @@ class WelcomeViewController: UIViewController {
             topColor: primaryColor,
             bottomColor: secondaryColor
         )
-        welcomeUser.text = "Welcome, \(userName ?? "")"
+        welcomeUser.text = "Welcome, \(user.person.name) \(user.person.surname)!"
     }
 }
 
