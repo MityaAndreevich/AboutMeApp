@@ -24,16 +24,11 @@ class LogInViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 15
     }
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as! UITabBarController
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //let tabBarController = segue.destination as! UITabBarController
        
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        //for viewController in viewControllers let welcomeVC = viewController as? WelcomeViewController {
-            
-        //}
-    
-       // welcomeVC.userName = userNameTextField.text
-    }
+       // guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+   // }
     
     // MARK: - IB Actions
     @IBAction func forgotRegisteredData(_ sender: UIButton) {
