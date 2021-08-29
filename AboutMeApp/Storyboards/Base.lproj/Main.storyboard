@@ -190,7 +190,13 @@
                             <constraint firstItem="F4f-m4-hCw" firstAttribute="trailing" secondItem="Dw9-54-8nX" secondAttribute="trailing" constant="20" id="oQl-5H-kVh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Dmitry" id="Igr-Y7-cZ1"/>
+                    <navigationItem key="navigationItem" title="Dmitry" id="Igr-Y7-cZ1">
+                        <barButtonItem key="rightBarButtonItem" title="Smth More?" id="PYp-p8-kSk">
+                            <connections>
+                                <segue destination="8Fj-NR-zgr" kind="presentation" identifier="goToFinalView" id="GDG-D8-K4I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="firstFact" destination="Qpw-6w-A9L" id="s0R-Vx-Fy1"/>
                         <outlet property="secondFact" destination="ZRi-TR-OBk" id="jYn-0K-DhZ"/>
@@ -200,6 +206,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOr-ZU-jei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3098" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OPH-3S-vgp">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="8Fj-NR-zgr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TfB-je-sAP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No! That's all)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpf-Za-Ce6">
+                                <rect key="frame" x="20" y="272" width="280" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALP-im-xHO">
+                                <rect key="frame" x="143" y="326" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="k09-Gl-bZg" kind="unwind" unwindAction="unwindFor:" id="YVW-Cn-8t4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="psa-GM-Co3"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="psa-GM-Co3" firstAttribute="trailing" secondItem="mpf-Za-Ce6" secondAttribute="trailing" constant="20" id="6KD-gE-DSo"/>
+                            <constraint firstItem="ALP-im-xHO" firstAttribute="centerX" secondItem="TfB-je-sAP" secondAttribute="centerX" id="QPp-df-oj7"/>
+                            <constraint firstItem="mpf-Za-Ce6" firstAttribute="centerX" secondItem="TfB-je-sAP" secondAttribute="centerX" id="cgw-E7-ypM"/>
+                            <constraint firstItem="mpf-Za-Ce6" firstAttribute="centerY" secondItem="TfB-je-sAP" secondAttribute="centerY" id="hWy-eS-E9T"/>
+                            <constraint firstItem="ALP-im-xHO" firstAttribute="top" secondItem="mpf-Za-Ce6" secondAttribute="bottom" constant="30" id="jfI-s6-Fr3"/>
+                            <constraint firstItem="mpf-Za-Ce6" firstAttribute="leading" secondItem="psa-GM-Co3" secondAttribute="leading" constant="20" id="scU-3n-v6c"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6n-ut-DAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="k09-Gl-bZg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3832.5" y="75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Nii-jV-eCD">
@@ -223,7 +270,7 @@
         <scene sceneID="jUn-bl-Er7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HiL-ev-E0a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About Me" id="bS0-G4-6Dl"/>
+                    <tabBarItem key="tabBarItem" title="About Me" image="book" catalog="system" id="bS0-G4-6Dl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="DUp-e5-yEN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
@@ -240,12 +287,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="128" height="102"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
