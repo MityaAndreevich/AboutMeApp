@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="78"/>
+            <point key="canvasLocation" x="-1273" y="-334"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="PUf-Yj-5in">
@@ -145,9 +145,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVj-7a-wbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="d4W-fy-OEt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1599" y="77"/>
+            <point key="canvasLocation" x="-1273" y="438"/>
         </scene>
-        <!--Dmitry-->
+        <!--About Me View Controller-->
         <scene sceneID="tQ7-wr-51W">
             <objects>
                 <viewController id="j10-sH-5Hk" customClass="AboutMeViewController" customModule="AboutMeApp" sceneMemberID="viewController">
@@ -190,7 +190,7 @@
                             <constraint firstItem="F4f-m4-hCw" firstAttribute="trailing" secondItem="Dw9-54-8nX" secondAttribute="trailing" constant="20" id="oQl-5H-kVh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Dmitry" id="Igr-Y7-cZ1">
+                    <navigationItem key="navigationItem" id="Igr-Y7-cZ1">
                         <barButtonItem key="rightBarButtonItem" title="Smth More?" id="PYp-p8-kSk">
                             <connections>
                                 <segue destination="8Fj-NR-zgr" kind="presentation" identifier="goToFinalView" id="GDG-D8-K4I"/>
@@ -205,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOr-ZU-jei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3098" y="76"/>
+            <point key="canvasLocation" x="324" y="437"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OPH-3S-vgp">
@@ -246,7 +246,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6n-ut-DAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="k09-Gl-bZg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3832.5" y="75"/>
+            <point key="canvasLocation" x="1146" y="437"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Nii-jV-eCD">
@@ -254,6 +254,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Zfv-yE-Is5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Loq-dT-9zo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -264,7 +265,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENE-Ql-lEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="77"/>
+            <point key="canvasLocation" x="-484" y="-335"/>
         </scene>
         <!--About Me-->
         <scene sceneID="jUn-bl-Er7">
@@ -283,7 +284,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRQ-jF-8c9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2332.5" y="76.056338028169009"/>
+            <point key="canvasLocation" x="-486" y="437"/>
         </scene>
     </scenes>
     <resources>

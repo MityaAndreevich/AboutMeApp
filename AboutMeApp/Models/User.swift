@@ -6,19 +6,39 @@
 //
 
 struct User {
-    let login = "User"
-    let password = "Password"
+    let login: String
+    let password: String
     let person: Person
     
    static func getInfo() -> User {
-    User(person: Person())
+    User(
+        login: "User",
+        password: "Password",
+        person: Person.getPersonInfo()
+    )
     }
 }
 
 struct Person {
-    let name = "Dmitry"
-    let surname = "Logachev"
-    let hobby = "Hobby: Psychology, Boxing, Fitness, cars, Swift)"
-    let eduation = "Education: Master of Economics"
-    let job = "Jobs: Researcher in Jato, entrepreneurship: selling sousages, making CVs."
+    let name: String
+    let surname: String
+    let hobby: String
+    let eduation: String
+    let job: String
+    let finale: String
+    
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
+    static func getPersonInfo() -> Person {
+        Person(
+            name: "Dmitry",
+            surname: "Logachev",
+            hobby: "Hobby: Psychology, Sports, cars, Swift",
+            eduation: "Education: Master of Economics",
+            job: "Jobs: Researcher in jato, entrepreneurship",
+            finale: "No! That;s all folks!"
+        )
+    }
 }
