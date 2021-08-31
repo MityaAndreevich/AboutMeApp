@@ -13,7 +13,7 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var secondFact: UILabel!
     @IBOutlet weak var thirdFact: UILabel!
     
-    let user = User.getInfo()
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()

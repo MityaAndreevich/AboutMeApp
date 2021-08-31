@@ -13,9 +13,10 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    let user = User.getInfo()
+    // MARK: - Private properties
+    private let user = User.getInfo()
     
-    //MARK: - Override Methods
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +24,19 @@ class LogInViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 15
     }
     // MARK: - Navigation
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                let aboutMeVC = navigationVC.topViewController as! AboutMeViewController
+                aboutMeVC.user = user
+            }
+        }
+    }
     
     // MARK: - IB Actions
     @IBAction func forgotRegisteredData(_ sender: UIButton) {
