@@ -21,6 +21,12 @@ class AboutMeViewController: UIViewController {
         secondFact.text = user.person.job
         thirdFact.text = user.person.hobby
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let finalVC = segue.destination as? FinalViewController else { return }
+        finalVC.user = user
+    }
+    
     @IBAction func unwind(for lastSegue: UIStoryboardSegue) {
     }
     

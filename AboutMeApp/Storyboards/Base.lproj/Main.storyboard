@@ -243,13 +243,13 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="finalLabel" destination="mpf-Za-Ce6" id="H2R-Zt-HYT"/>
+                        <outlet property="finalLabel" destination="mpf-Za-Ce6" id="d6t-d1-iY4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6n-ut-DAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="k09-Gl-bZg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="437"/>
+            <point key="canvasLocation" x="1145.625" y="436.26760563380282"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Nii-jV-eCD">
