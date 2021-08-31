@@ -10,12 +10,12 @@ struct User {
     let password: String
     let person: Person
     
-   static func getInfo() -> User {
-    User(
-        login: "User",
-        password: "Password",
-        person: Person.getPersonInfo()
-    )
+    static func getInfo() -> User {
+        User(
+            login: "User",
+            password: "Password",
+            person: Person.getPersonInfo()
+        )
     }
 }
 
@@ -38,7 +38,7 @@ struct Person {
             hobby: "Hobby: Psychology, Sports, cars, Swift",
             eduation: "Education: Master of Economics",
             job: "Jobs: Researcher in jato, entrepreneurship",
-            finale: "No! That;s all folks!"
+            finale: "No! That's all folks!"
         )
     }
 }
