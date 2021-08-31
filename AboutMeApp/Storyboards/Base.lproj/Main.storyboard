@@ -215,8 +215,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No! That's all)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpf-Za-Ce6">
-                                <rect key="frame" x="20" y="272" width="280" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No! That's all)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpf-Za-Ce6">
+                                <rect key="frame" x="99.5" y="272" width="121.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -232,12 +232,13 @@
                         <viewLayoutGuide key="safeArea" id="psa-GM-Co3"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="psa-GM-Co3" firstAttribute="trailing" secondItem="mpf-Za-Ce6" secondAttribute="trailing" constant="20" id="6KD-gE-DSo"/>
+                            <constraint firstItem="psa-GM-Co3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mpf-Za-Ce6" secondAttribute="trailing" constant="20" id="6KD-gE-DSo"/>
                             <constraint firstItem="ALP-im-xHO" firstAttribute="centerX" secondItem="TfB-je-sAP" secondAttribute="centerX" id="QPp-df-oj7"/>
+                            <constraint firstItem="psa-GM-Co3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ALP-im-xHO" secondAttribute="bottom" constant="20" id="Xvc-NB-Dl3"/>
                             <constraint firstItem="mpf-Za-Ce6" firstAttribute="centerX" secondItem="TfB-je-sAP" secondAttribute="centerX" id="cgw-E7-ypM"/>
                             <constraint firstItem="mpf-Za-Ce6" firstAttribute="centerY" secondItem="TfB-je-sAP" secondAttribute="centerY" id="hWy-eS-E9T"/>
                             <constraint firstItem="ALP-im-xHO" firstAttribute="top" secondItem="mpf-Za-Ce6" secondAttribute="bottom" constant="30" id="jfI-s6-Fr3"/>
-                            <constraint firstItem="mpf-Za-Ce6" firstAttribute="leading" secondItem="psa-GM-Co3" secondAttribute="leading" constant="20" id="scU-3n-v6c"/>
+                            <constraint firstItem="mpf-Za-Ce6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="psa-GM-Co3" secondAttribute="leading" constant="20" id="scU-3n-v6c"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
