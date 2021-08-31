@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="324" y="437"/>
         </scene>
-        <!--View Controller-->
+        <!--Final View Controller-->
         <scene sceneID="OPH-3S-vgp">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="8Fj-NR-zgr" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="8Fj-NR-zgr" customClass="FinalViewController" customModule="AboutMeApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TfB-je-sAP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,6 +242,9 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="finalLabel" destination="mpf-Za-Ce6" id="H2R-Zt-HYT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6n-ut-DAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="k09-Gl-bZg" userLabel="Exit" sceneMemberID="exit"/>
